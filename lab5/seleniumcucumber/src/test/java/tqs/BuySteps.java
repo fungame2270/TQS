@@ -22,8 +22,8 @@ public class BuySteps {
         driver.get(url);
     }
 
-    @When("I choose from departure Portland")
-    public void i_choose_from_departure_portland() {
+    @And("I choose from departure {string}")
+    public void i_choose_from_departure_portland(String woof) {
         driver.findElement(By.name("fromPort")).click();
         {
         WebElement dropdown = driver.findElement(By.name("fromPort"));
@@ -32,7 +32,7 @@ public class BuySteps {
         driver.findElement(By.cssSelector(".form-inline:nth-child(1) > option:nth-child(4)")).click();
     }
 
-    @When("I choose destination Berlin")
+    @And("I choose destination Berlin")
     public void i_choose_destination_berlin() {
         driver.findElement(By.name("toPort")).click();
         {
